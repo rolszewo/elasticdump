@@ -29,5 +29,9 @@ source elastic_venv/bin/activate
 export ES_URL=http://localhost:9200
 export ES_USERNAME=elastic
 export ES_PASSWORD="secret"
-python3 elasticdump.py --index myindex-104-prod-2025.10.18 --combine 
+
+./elasticdump.py --index myindex-104-prod-2025.10.18 --combine
+
+./elasticdump.py --index "logs-2024-*" --list-only
+./elasticdump.py --index "logs-2024-*" --combine
 ```
